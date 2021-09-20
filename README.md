@@ -52,8 +52,7 @@ const onChange = ( data ) => {
 | textColor        | `string`                   | Text color of each input box.<br /> Default: `#000`                                                                      | `#001F3F`                                 | no          |
 | borderColor      | `string`                   | Border color of each input box.<br /> Default: `#BBB`                                                                    | `#DDD`                                    | no          |
 | size             | `small \| medium \| large` | Size of each input.<br /> Default: `medium`                                                                              | `large`                                   | no          |
-| inputStyle       | `object`                   | Stylesheet object<br /> Default: 
-`{}`                                                                              | `{fontSize:20, width:40}`                                   | no          |
+| inputStyle       | `object`                   | Stylesheet object<br /> Default: `{}`                                                                              | `{fontSize:20, width:40}`                                   | no          |
 
 ## Types
 ### TWordStructure
