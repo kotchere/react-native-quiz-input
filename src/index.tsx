@@ -29,6 +29,7 @@ type TIndividualCharsInput = {
     backgroundColor?: string;
     textColor?: string;
     size?: TAllowedSizes;
+    inputStyle: object;
     onChange: ( inputContent: TCallbackData ) => void;
 };
 
@@ -47,7 +48,8 @@ const DEFAULT_PROPS = {
     borderColor: '#BBBBBB',
     backgroundColor: 'transparent',
     textColor: '#000000',
-    size: 'medium'
+    size: 'medium',
+    inputStyle: {}
 } as Partial<TIndividualCharsInput>;
 
 const getSizeRelatedProps = ( size: TAllowedSizes ): TSizeRelatedProps => {
@@ -270,6 +272,7 @@ export const QuizInput = ( props: TIndividualCharsInput ) => {
         backgroundColor,
         textColor,
         size,
+        inputStyle,
         onChange: externalOnChange
     } = mergedProps;
     const inputsRef = useRef( [] as any );
@@ -337,7 +340,8 @@ export const QuizInput = ( props: TIndividualCharsInput ) => {
             marginRight: 1,
             textAlign: 'center',
             paddingTop: 0,
-            paddingBottom: 0
+            paddingBottom: 0,
+            ...inputStyle
         },
         spacer: {
             width: 20
